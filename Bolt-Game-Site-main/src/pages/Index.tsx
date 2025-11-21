@@ -2,7 +2,15 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import GameCard from "@/components/GameCard";
+import TeamCard from "@/components/TeamCard";
 import Countdown from "@/components/Countdown";
 import GoogleFormRedirect from "@/components/GoogleFormRedirect";
 import GoogleSheetsTeams from "@/components/GoogleSheetsTeams";
@@ -424,17 +432,45 @@ const Index = () => {
                 <h2 className="text-3xl font-heading font-bold text-gradient-accent mb-6">
                   Competing Teams
                 </h2>
-                <div className="space-y-8">
+                <div className="space-y-12">
                   {['PUBG MOBILE', 'COD MOBILE', 'MOBILE LEGENDS'].map(game => {
                 const gameTeams = teams.filter(t => t.game === game);
                 if (gameTeams.length === 0) return null;
-                return <div key={game}>
-                        <h3 className="text-2xl font-heading font-bold text-primary mb-4">{game}</h3>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                          {gameTeams.map((team, index) => <Card key={index} className="p-4 border-primary/20 hover:border-primary transition-all">
-                              <h4 className="font-heading font-bold text-primary">{team.team_name}</h4>
-                            </Card>)}
+                return <div key={game} className="w-full">
+                        <h3 className="text-2xl font-heading font-bold text-primary mb-6 text-center">{game}</h3>
+                        {/* Mobile swipe indicator */}
+                        <div className="sm:hidden flex items-center justify-center gap-2 mb-4 text-muted-foreground text-sm animate-pulse">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M5 12h14"/>
+                            <path d="m12 5 7 7-7 7"/>
+                          </svg>
+                          <span>Swipe to view more teams</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M5 12h14"/>
+                            <path d="m5 12 7-7 7 7"/>
+                          </svg>
                         </div>
+                        <Carousel
+                          opts={{
+                            align: "start",
+                            loop: true,
+                          }}
+                          className="w-full max-w-5xl mx-auto"
+                        >
+                          <CarouselContent className="-ml-2 md:-ml-4">
+                            {gameTeams.map((team, index) => (
+                              <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+                                <TeamCard
+                                  teamName={team.team_name}
+                                  game={game}
+                                  logoUrl={undefined}
+                                />
+                              </CarouselItem>
+                            ))}
+                          </CarouselContent>
+                          <CarouselPrevious className="hidden sm:flex -left-4 md:-left-12" />
+                          <CarouselNext className="hidden sm:flex -right-4 md:-right-12" />
+                        </Carousel>
                       </div>;
               })}
                 </div>
@@ -695,7 +731,7 @@ const Index = () => {
             </div>
           </Card>
 
-          <Card className="p-12 border-primary/20 text-center bg-gradient-primary/10">
+          <Card className="p-12 border-primary/20 text-center bg-gradient-primary/10" id="register-form">
             <h2 className="text-3xl font-heading font-black text-gradient-accent mb-4">
               Ready to Compete?
             </h2>
