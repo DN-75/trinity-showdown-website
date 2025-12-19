@@ -42,14 +42,14 @@ const Index = () => {
     pubg: {
       title: "PUBG MOBILE",
       image: pubgImage,
-      prizePool: "45,000 LKR",
+      prizePool: "30,000 LKR",
       format: "Squad (4 players)",
       duration: "30 minutes per match",
       requirements: "Level 40+, KD ratio 2.0+",
       prizes: {
-        first: "22,500 LKR",
-        second: "13,500 LKR",
-        third: "9,000 LKR"
+        first: "15,000 LKR",
+        second: "10,000 LKR",
+        third: "5,000 LKR"
       }
     },
     codm: {
@@ -61,21 +61,21 @@ const Index = () => {
       requirements: "Master rank or above",
       prizes: {
         first: "15,000 LKR",
-        second: "9,000 LKR",
-        third: "6,000 LKR"
+        second: "10,000 LKR",
+        third: "5,000 LKR"
       }
     },
     mlbb: {
       title: "MOBILE LEGENDS",
       image: mlbbImage,
-      prizePool: "15,000 LKR",
-      format: "5v5 Team",
+      prizePool: "30,000 LKR",
+      format: "Team (5 players)",
       duration: "Best of 3 matches",
       requirements: "Epic rank minimum",
       prizes: {
-        first: "7,500 LKR",
-        second: "4,500 LKR",
-        third: "3,000 LKR"
+        first: "15,000 LKR",
+        second: "10,000 LKR",
+        third: "5,000 LKR"
       }
     }
   };
@@ -102,7 +102,7 @@ const Index = () => {
           </div>
 
           <div className="p-8 space-y-6">
-            <div className="grid md:grid-cols-3 gap-6 items-center justify-items-center">
+            <div className="grid md:grid-cols-2 gap-6 items-center justify-items-center">
               <div className="space-y-2">
                 <h3 className="text-lg font-heading font-bold text-primary text-center">Format</h3>
                 <p className="text-muted-foreground">{data.format}</p>
@@ -111,10 +111,7 @@ const Index = () => {
                 <h3 className="text-lg font-heading font-bold text-primary text-center">Duration</h3>
                 <p className="text-muted-foreground">{data.duration}</p>
               </div>
-              <div className="space-y-2">
-                <h3 className="text-lg font-heading font-bold text-primary text-center">Requirements</h3>
-                <p className="text-muted-foreground">{data.requirements}</p>
-              </div>
+
             </div>
 
             <div className="border-t border-primary/20 pt-6">
@@ -165,10 +162,8 @@ const Index = () => {
 
         <div className="relative z-10 container mx-auto px-4 text-center space-y-8">
           <div className="space-y-4 animate-in fade-in slide-in-from-bottom duration-700">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-heading font-black leading-tight">
-              <span className="text-gradient-primary">TRINITY</span>
-              <br />
-              <span className="text-gradient-accent">SHOWDOWN</span>
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-heading font-black leading-tight text-center">
+              <img src="/logo.png" alt="logo image" className={'w-[300px] h-24 mx-auto'}/>
             </h1>
             <p className="text-base sm:text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto px-4">
               The Ultimate Mobile Gaming Tournament
@@ -214,7 +209,7 @@ const Index = () => {
             </div>
             <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg p-6">
               <Calendar className="w-12 h-12 text-accent mx-auto mb-3" />
-              <div className="text-3xl font-heading font-black text-accent">Jan 26</div>
+              <div className="text-3xl font-heading font-black text-accent">Jan 25</div>
               <div className="text-muted-foreground">2026</div>
             </div>
           </div>
@@ -326,7 +321,7 @@ const Index = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-heading font-bold text-primary mb-2">Registration Phase</h3>
-                  <p className="text-muted-foreground mb-2">December 7 - December 28, 2025</p>
+                  <p className="text-muted-foreground mb-2">December 21 - January 04, 2026</p>
                   <p className="text-muted-foreground">Teams register and submit their rosters for verification</p>
                 </div>
               </div>
@@ -337,7 +332,7 @@ const Index = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-heading font-bold text-gold mb-2">Tournament Day</h3>
-                  <p className="text-muted-foreground mb-2">January 18, 2026</p>
+                  <p className="text-muted-foreground mb-2">January 25, 2026</p>
                   <p className="text-muted-foreground">One day of intense competition across all three games</p>
                 </div>
               </div>
@@ -653,7 +648,7 @@ const Index = () => {
             <Card className="p-6 border-primary/20 text-center">
               <Calendar className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="text-lg font-heading font-bold text-primary mb-2">Deadline</h3>
-              <p className="text-muted-foreground">December 28, 2025</p>
+              <p className="text-muted-foreground">January 04, 2025</p>
             </Card>
 
             <Card className="p-6 border-accent/20 text-center">
@@ -665,7 +660,7 @@ const Index = () => {
             <Card className="p-6 border-gold/20 text-center">
               <DollarSign className="w-12 h-12 text-gold mx-auto mb-4" />
               <h3 className="text-lg font-heading font-bold text-gold mb-2">Entry Fee</h3>
-              <p className="text-muted-foreground">Free Registration</p>
+              <p className="text-muted-foreground">Per Team 1000LKR</p>
             </Card>
           </div>
 
@@ -714,19 +709,7 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center">
-                  <span className="font-heading font-bold text-primary">4</span>
-                </div>
-                <div>
-                  <h3 className="font-heading font-bold text-primary mb-1">
-                    Await Confirmation
-                  </h3>
-                  <p className="text-muted-foreground">
-                    You'll receive a confirmation email within 48 hours of registration
-                  </p>
-                </div>
-              </div>
+
             </div>
           </Card>
 
