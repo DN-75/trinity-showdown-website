@@ -214,7 +214,7 @@ const Index = () => {
             </div>
             <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg p-6">
               <Calendar className="w-12 h-12 text-accent mx-auto mb-3" />
-              <div className="text-3xl font-heading font-black text-accent">Jan 18</div>
+              <div className="text-3xl font-heading font-black text-accent">Jan 26</div>
               <div className="text-muted-foreground">2026</div>
             </div>
           </div>
