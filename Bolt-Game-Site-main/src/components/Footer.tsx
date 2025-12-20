@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-wrap justify-center gap-8">
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="space-y-4 text-center">
             <h3 className="text-2xl font-heading font-black text-gradient-primary">
               TRINITY SHOWDOWN
             </h3>
@@ -22,7 +22,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="font-heading font-bold text-primary mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 pl-2">
               <li>
                 <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
                   About Us
@@ -49,7 +49,7 @@ const Footer = () => {
           {/* Tournament Info */}
           <div>
             <h4 className="font-heading font-bold text-primary mb-4">Tournament</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 pl-2">
               <li>
                 <a href="#register" className="text-muted-foreground hover:text-primary transition-colors">
                   Register

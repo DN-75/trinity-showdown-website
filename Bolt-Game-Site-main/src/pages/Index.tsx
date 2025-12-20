@@ -695,9 +695,9 @@ const Index = () => {
                 <h3 className="text-lg sm:text-xl font-heading font-bold text-accent mb-4 text-center">
                   Tournament Organizers
                 </h3>
-                <div className="space-y-4">
+                <div className="space-x-2 md:space-x-4 flex justify-center">
                   <div>
-                    <h4 className="font-bold text-foreground mb-1 text-center">Mora eSports Club</h4>
+                    <h4 className="font-bold text-foreground mb-1 text-center">Mora E-Sports Community</h4>
                     <p className="text-sm text-muted-foreground text-center">Tournament Operations</p>
                     <a href="mailto:esports@moratuwa.ac.lk" className="text-sm text-primary hover:underline block text-center">
                       esports@moratuwa.ac.lk
