@@ -16,7 +16,7 @@ import GoogleFormRedirect from "@/components/GoogleFormRedirect";
 import GoogleSheetsTeams from "@/components/GoogleSheetsTeams";
 import { Trophy, Users, Calendar, Target, Heart, Shield, FileText, Download, CheckCircle, AlertCircle, DollarSign, Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
-import heroImage from "@/assets/hero-bg.jpg";
+import heroImage from "@/assets/bg.jpg";
 import pubgImage from "@/assets/pubg-bg-min.jpg";
 import codmImage from "@/assets/cod-bg-min.jpg";
 import mlbbImage from "@/assets/mb-bg.jpg";
