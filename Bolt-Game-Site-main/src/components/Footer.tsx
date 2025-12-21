@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-card border-t border-primary/20 mt-20">
+    <footer className="bg-card border-t border-primary/20 mt-20" id={'footer'}>
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-wrap justify-center gap-8">
           {/* Brand */}
@@ -73,35 +73,35 @@ const Footer = () => {
             <h4 className="font-heading font-bold text-primary mb-4">Follow Us</h4>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="#footer"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={24} />
               </a>
               <a
-                href="#"
+                href="#footer"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={24} />
               </a>
               <a
-                href="#"
+                href="#footer"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter size={24} />
               </a>
               <a
-                href="#"
+                href="#footer"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="YouTube"
               >
                 <Youtube size={24} />
               </a>
               <a
-                href="mailto:contact@trinityshowdown.com"
+                href="#footer"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Email"
               >

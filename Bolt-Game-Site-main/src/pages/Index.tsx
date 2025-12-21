@@ -17,9 +17,9 @@ import GoogleSheetsTeams from "@/components/GoogleSheetsTeams";
 import { Trophy, Users, Calendar, Target, Heart, Shield, FileText, Download, CheckCircle, AlertCircle, DollarSign, Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
 import heroImage from "@/assets/hero-bg.jpg";
-import pubgImage from "@/assets/pubg.jpg";
-import codmImage from "@/assets/codm.jpg";
-import mlbbImage from "@/assets/mlbb.jpg";
+import pubgImage from "@/assets/pubg-bg.jpg";
+import codmImage from "@/assets/cod-bg.jpg";
+import mlbbImage from "@/assets/mb-bg.jpg";
 // define Team type locally to avoid any
 type Team = { team_name: string; game: string; logo_url?: string };
 const Index = () => {
@@ -88,7 +88,7 @@ const Index = () => {
     return <div className="space-y-8">
         <Card className="overflow-hidden border-primary/20">
           <div className="relative h-64 md:h-96">
-            <img src={data.image} alt={data.title} className="w-full h-full object-cover" />
+            <img src={data.image} alt={data.title} className={`w-full h-full object-cover ${data.title=='PUBG MOBILE'||data.title=='COD MOBILE'?'object-top':''}`} />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-8">
               <h2 className="md:text-5xl font-heading font-black text-gradient-primary mb-2 text-2xl">
@@ -280,8 +280,9 @@ const Index = () => {
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-8 border-primary/20">
-                <Users className="w-16 h-16 text-primary mb-4 mx-auto" />
+              <Card className="p-8 border-primary/20 ">
+                {/*<Users className="w-16 h-16 text-primary mb-4 mx-auto" />*/}
+                <img src="/MoreESports.jpeg" alt="Mora esports logo" className={'w-28 h-28 mx-auto rounded-full border-2 border-neutral-500'}/>
                 <h3 className="text-2xl font-heading font-bold text-primary mb-4 text-center">
                   Mora Esports Community
                 </h3>
@@ -291,7 +292,8 @@ const Index = () => {
               </Card>
 
               <Card className="p-8 border-accent/20">
-                <Heart className="w-16 h-16 text-accent mb-4 mx-auto" />
+                {/*<Heart className="w-16 h-16 text-accent mb-4 mx-auto" />*/}
+                <img src="/Rotaract%20Mora%20White.png" alt="Rotaract logo" className={'w-[250px] h-[110px] mx-auto border-0 border-neutral-500 rounded-lg'}/>
                 <h3 className="text-2xl font-heading font-bold text-accent mb-4 text-center">
                   Rotaract Club
                 </h3>
@@ -549,8 +551,9 @@ const Index = () => {
 
 
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="p-8 border-primary/20 text-center bg-gradient-primary/10 hover:border-primary transition-all">
-              <Download className="w-12 h-12 text-primary mx-auto mb-4" />
+            <Card className="p-8 border-primary/20 text-center bg-gradient-primary/10 hover:border-primary transition-all pt-6">
+              {/*<Download className="w-12 h-12 text-primary mx-auto mb-4" />*/}
+              <img src="/pubg.jfif" alt="pubg image" className={'w-20 h-20 mx-auto border-2 border-neutral-500 rounded-full'}/>
               <h3 className="text-xl font-heading font-bold text-primary mb-3">
                 PUBG MOBILE
               </h3>
@@ -563,8 +566,9 @@ const Index = () => {
               </Button>
             </Card>
 
-            <Card className="p-8 border-accent/20 text-center bg-gradient-accent/10 hover:border-accent transition-all">
-              <Download className="w-12 h-12 text-accent mx-auto mb-4" />
+            <Card className="p-8 border-accent/20 text-center bg-gradient-accent/10 hover:border-accent transition-all pt-6">
+              {/*<Download className="w-12 h-12 text-accent mx-auto mb-4" />*/}
+              <img src="/cod.jfif" alt="cod logo" className={'w-20 h-20 mx-auto border-2 border-neutral-500 rounded-full'}/>
               <h3 className="text-xl font-heading font-bold text-accent mb-3">
                 COD MOBILE
               </h3>
@@ -577,8 +581,9 @@ const Index = () => {
               </Button>
             </Card>
 
-            <Card className="p-8 border-gold/20 text-center bg-gradient-accent/10 hover:border-gold transition-all">
-              <Download className="w-12 h-12 text-gold mx-auto mb-4" />
+            <Card className="p-8 border-gold/20 text-center bg-gradient-accent/10 hover:border-gold transition-all pt-6 ">
+              {/*<Download className="w-12 h-12 text-gold mx-auto mb-4" />*/}
+              <img src="/mlbb.jfif" alt="cod logo" className={'w-20 h-20 mx-auto border-2 border-neutral-500 rounded-full'}/>
               <h3 className="text-xl font-heading font-bold text-gold mb-3">
                 MOBILE LEGENDS
               </h3>
@@ -695,20 +700,14 @@ const Index = () => {
                 <h3 className="text-lg sm:text-xl font-heading font-bold text-accent mb-4 text-center">
                   Tournament Organizers
                 </h3>
-                <div className="space-x-2 md:space-x-4 flex justify-center">
+                <div className="flex flex-col space-y-8 md:flex-row md:space-x-12 justify-center items-center md:space-y-0">
                   <div>
-                    <h4 className="font-bold text-foreground mb-1 text-center">Mora E-Sports Community</h4>
-                    <p className="text-sm text-muted-foreground text-center">Tournament Operations</p>
-                    <a href="mailto:esports@moratuwa.ac.lk" className="text-sm text-primary hover:underline block text-center">
-                      esports@moratuwa.ac.lk
-                    </a>
+                    <h4 className="font-bold text-foreground mb-1 text-center text-green-500">Mora E-Sports Community</h4>
+                    <img src="/MoreESports.jpeg" alt="Mora esports logo" className={'w-20 h-20 rounded-full border-2 border-neutral-500 mx-auto'}/>
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground mb-1 text-center">Rotaract Club</h4>
-                    <p className="text-sm text-muted-foreground text-center">Event Management</p>
-                    <a href="mailto:rotaract@moratuwa.ac.lk" className="text-sm text-accent hover:underline block text-center">
-                      rotaract@moratuwa.ac.lk
-                    </a>
+                    <h4 className="font-bold text-foreground mb-1 text-center text-green-500">Rotaract Club</h4>
+                    <img src="/Rotaract%20Mora%20White.png" alt="rotact logo" className={'w-40 h-20 mx-auto'}/>
                   </div>
                 </div>
               </Card>
