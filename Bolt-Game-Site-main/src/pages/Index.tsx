@@ -282,7 +282,7 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="p-8 border-primary/20 ">
                 {/*<Users className="w-16 h-16 text-primary mb-4 mx-auto" />*/}
-                <img src="/MoreESports.jpeg" alt="Mora esports logo" className={'w-28 h-28 mx-auto rounded-full border-2 border-neutral-500'}/>
+                <img src="/moraE.png" alt="Mora esports logo" className={'w-28 h-28 mx-auto'}/>
                 <h3 className="text-2xl font-heading font-bold text-primary mb-4 text-center">
                   Mora Esports Community
                 </h3>
@@ -703,7 +703,7 @@ const Index = () => {
                 <div className="flex flex-col space-y-8 md:flex-row md:space-x-12 justify-center items-center md:space-y-0">
                   <div>
                     <h4 className="font-bold text-foreground mb-1 text-center text-green-500">Mora E-Sports Community</h4>
-                    <img src="/MoreESports.jpeg" alt="Mora esports logo" className={'w-20 h-20 rounded-full border-2 border-neutral-500 mx-auto'}/>
+                    <img src="/moraE.png" alt="Mora esports logo" className={'w-24 h-24 mx-auto'}/>
                   </div>
                   <div>
                     <h4 className="font-bold text-foreground mb-1 text-center text-green-500">Rotaract Club</h4>
