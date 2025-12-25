@@ -280,9 +280,9 @@ const Index = () => {
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-8 border-primary/20 ">
+              <Card className="p-8 border-primary/20 pt-2">
                 {/*<Users className="w-16 h-16 text-primary mb-4 mx-auto" />*/}
-                <img src="/moraE.png" alt="Mora esports logo" className={'w-28 h-28 mx-auto'}/>
+                <img src="/moraE.png" alt="Mora esports logo" className={'w-36 h-36 mx-auto'}/>
                 <h3 className="text-2xl font-heading font-bold text-primary mb-4 text-center">
                   Mora Esports Community
                 </h3>
@@ -706,11 +706,11 @@ const Index = () => {
                 </h3>
                 <div className="flex flex-col space-y-8 md:flex-row md:space-x-12 justify-center items-center md:space-y-0">
                   <div>
-                    <h4 className="font-bold text-foreground mb-1 text-center text-green-500">Mora E-Sports Community</h4>
-                    <img src="/moraE.png" alt="Mora esports logo" className={'w-24 h-24 mx-auto'}/>
+                    <h4 className="font-bold text-foreground  text-center text-green-500">Mora E-Sports Community</h4>
+                    <img src="/moraE.png" alt="Mora esports logo" className={'w-28 h-28 mx-auto'}/>
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground mb-1 text-center text-green-500">Rotaract Club</h4>
+                    <h4 className="font-bold text-foreground mb-1 lg:mb-7 text-center text-green-500">Rotaract Club</h4>
                     <img src="/Rotaract%20Mora%20White.png" alt="rotact logo" className={'w-72 h-20 mx-auto'}/>
                   </div>
                 </div>
