@@ -94,7 +94,7 @@ const Index = () => {
               <h2 className="md:text-5xl font-heading font-black text-gradient-primary mb-2 text-2xl">
                 {data.title}
               </h2>
-              <div className="flex items-center space-x-2 text-gold rounded-sm">
+              <div className="hidden items-center space-x-2 text-gold rounded-sm">
                 <Trophy size={24} />
                 <span className="text-2xl font-bold text-center">{data.prizePool}</span>
               </div>
@@ -114,7 +114,7 @@ const Index = () => {
 
             </div>
 
-            <div className="border-t border-primary/20 pt-6">
+            <div className="border-t border-primary/20 pt-6 hidden">
               <h3 className="text-2xl font-heading font-bold text-gradient-accent mb-4 text-center">
                 Prize Distribution
               </h3>
