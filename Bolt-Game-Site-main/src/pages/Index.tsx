@@ -600,10 +600,12 @@ const Index = () => {
                         <p className="text-sm text-muted-foreground mb-6">
                             PUBG Mobile Tournament Rules & Regulations
                         </p>
-                        <Button variant="default" className="glow-primary w-full">
-                            <Download className="mr-2 h-4 w-4"/>
-                            Download Rule Book
-                        </Button>
+                        <a href="/PUBG%20%20Rulebook.pdf" download>
+                            <Button variant="default" className="glow-primary w-full">
+                                <Download className="mr-2 h-4 w-4"/>
+                                Download Rule Book
+                            </Button>
+                        </a>
                     </Card>
 
                     <Card
@@ -765,7 +767,8 @@ const Index = () => {
                                 <img src="/moraE.png" alt="Mora esports logo" className={'w-28 h-28 mx-auto'}/>
                             </div>
                             <div>
-                                <h4 className="font-bold text-foreground mb-1 lg:mb-7 text-center text-green-500">Rotaract Mora</h4>
+                                <h4 className="font-bold text-foreground mb-1 lg:mb-7 text-center text-green-500">Rotaract
+                                    Mora</h4>
                                 <img src="/Rotaract%20Mora%20White.png" alt="rotact logo"
                                      className={'w-72 h-20 mx-auto'}/>
                             </div>
